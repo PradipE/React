@@ -1,17 +1,14 @@
-import React from 'react'
-import './App.css'
-import Navbar from './Component/Navbar/Navbar'
-import Footer from './Component/Footer/Footer'
-import { Outlet } from 'react-router-dom'
+import react from 'react'
+
+import { RouterProvider } from 'react-router-dom'
+import router from "./Router/Router.jsx"
 
 function App() {
   
 
   return (
     <>
-      <Navbar/>
-      <Outlet/>
-      <Footer/>
+      <RouterProvider router={router}/>
     </>
   )
 }
