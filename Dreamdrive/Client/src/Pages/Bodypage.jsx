@@ -1,15 +1,24 @@
-import React from 'react'
-import buy from '../assets/buy.jpg' 
+import React, { useState } from 'react'
+import carbody from '../assets/carbody.jpg'
+import { useNavigate } from 'react-router-dom'
+import Buyguide from '../Component/Buyguide'
 function Bodypage() {
+ 
+  const Navigation= useNavigate()
   return (
-    <div>
-       <div className='w-full h-screen bg-gray-500 pt-28'>
+       <>
+       <div className='w-full h-auto grid  '>
+        <div className='h-screen w-full' style={{backgroundImage:`url(${carbody})`,backgroundSize:'cover'}}> </div>
         <div>
-          
+            <Buyguide/>
         </div>
-            
+              
+       
+        
+         
+
        </div>
-    </div>
+       </>
   )
 }
 

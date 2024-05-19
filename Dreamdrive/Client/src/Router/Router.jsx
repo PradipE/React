@@ -4,6 +4,8 @@ import Bodypage from '../Pages/Bodypage.jsx'
 import Buy from '../Pages/Buy.jsx'
 import Sell from '../Pages/Sell.jsx'
 import Rent from '../Pages/Rent.jsx'
+import Signin from '../Pages/Signin.jsx'
+import Signup from '../Pages/Signup.jsx'
 
  const router=createBrowserRouter([
 
@@ -31,6 +33,19 @@ import Rent from '../Pages/Rent.jsx'
                 element:<Rent/>,
 
             },
+            {
+                path:'signin',
+                element:<Signin/>,
+                children:[
+                    {
+                        path:'signup',
+                        element:<Signup/>
+                    }
+                ]
+                
+            },
+            
+            
            
         ],
     },

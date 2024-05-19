@@ -1,18 +1,21 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink,Link } from "react-router-dom";
 import Button from "../Component/Button.jsx";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import Signin from "./Signin.jsx";
+import { useAuth0 } from "@auth0/auth0-react";
 function Navbar() {
   const [click, setClick] = useState(false);
   const [nav, setNav] = useState(false);
+  const { loginWithRedirect } = useAuth0();
 
   const Buttonstyle = {
     backgroundColor: "#2db300",
-    height: "45px",
-    width: "140px",
+    height: "35px",
+    width: "110px",
     borderRadius: "10px",
     border: "none",
-    fontSize: "23px",
+    fontSize: "17px",
     fontWeight: "semibold",
     color: "white",
   };
@@ -33,7 +36,7 @@ function Navbar() {
     setNav(!nav);
   };
   return (
-    <div className="bg-gray-100 flex  justify-between items-center  mx-auto px-10 h-28 sticky top-0 z-auto">
+    <div className="bg-gray-100 flex  justify-between items-center  mx-auto px-10 h-24 sticky top-0 z-auto">
       <div className="flex">
         <NavLink
           to="bodypage"
@@ -48,7 +51,7 @@ function Navbar() {
         <li className="p-5 ">
           <NavLink
             to="buy"
-            className="text-gray-900 hover:text-green-600 text-3xl font-bold"
+            className="text-gray-900 hover:text-green-600 text-3xl  font-bold"
           >
             BUY
           </NavLink>
@@ -56,7 +59,7 @@ function Navbar() {
         <li className="p-5">
           <NavLink
             to="sell"
-            className="text-gray-900 hover:text-green-600 text-3xl font-bold"
+            className="text-gray-900 hover:text-green-600 text-3xl  font-bold"
           >
             
             SELL
@@ -65,7 +68,7 @@ function Navbar() {
         <li className="p-5">
           <NavLink
             to="rent"
-            className="text-gray-900  hover:text-green-600 text-3xl font-bold"
+            className="text-gray-900  hover:text-green-600 text-3xl  font-bold"
           >
             RENT
           </NavLink>
@@ -73,7 +76,8 @@ function Navbar() {
       </ul>
 
       <div className="hidden sm:flex">
-        <Button text="Sign in" style={Buttonstyle} onClick={Clickme} />
+       <Button text="Sign in"onClick={() => loginWithRedirect()}/>
+        
       </div>
       <div onClick={Handlenav} className=" md:hidden">
         {!nav ? (
@@ -126,7 +130,7 @@ function Navbar() {
           </li>
         </ul>
         <div className="p-7">
-          <Button text="Sign in" style={Buttonstyl} onClick={Clickme} />
+        <Button text="Sign in" onClick={() => loginWithRedirect()}/>
         </div>
       </div>
     </div>
