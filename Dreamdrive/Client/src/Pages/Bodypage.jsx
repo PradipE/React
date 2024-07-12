@@ -7,16 +7,11 @@ function Bodypage() {
   const Navigation= useNavigate()
   return (
        <>
-       <div className='w-full h-auto grid  '>
+       <div className='w-full h-auto grid'>
         <div className='h-screen w-full' style={{backgroundImage:`url(${carbody})`,backgroundSize:'cover'}}> </div>
-        <div>
+           <div>
             <Buyguide/>
-        </div>
-              
-       
-        
-         
-
+           </div>
        </div>
        </>
   )

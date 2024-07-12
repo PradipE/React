@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import { NavLink,Link } from "react-router-dom";
 import Button from "../Component/Button.jsx";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import Signin from "./Signin.jsx";
-import { useAuth0 } from "@auth0/auth0-react";
+
 function Navbar() {
-  const [click, setClick] = useState(false);
+  
   const [nav, setNav] = useState(false);
-  const { loginWithRedirect } = useAuth0();
+  
 
   const Buttonstyle = {
     backgroundColor: "#2db300",
@@ -29,9 +28,7 @@ function Navbar() {
     fontWeight: "semibold",
     color: "white",
   };
-  const Clickme = () => {
-    setClick(true);
-  };
+ 
   const Handlenav = () => {
     setNav(!nav);
   };
@@ -76,7 +73,7 @@ function Navbar() {
       </ul>
 
       <div className="hidden sm:flex">
-       <Button text="Sign in"onClick={() => loginWithRedirect()}/>
+       <Button text="Sign in"onClick={{}}/>
         
       </div>
       <div onClick={Handlenav} className=" md:hidden">
@@ -130,7 +127,7 @@ function Navbar() {
           </li>
         </ul>
         <div className="p-7">
-        <Button text="Sign in" onClick={() => loginWithRedirect()}/>
+        <Button text="Sign in" onClick={{}}/>
         </div>
       </div>
     </div>
