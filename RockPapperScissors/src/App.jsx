@@ -66,8 +66,10 @@ function App() {
       </h1>
 
       <div className="text-2xl font-semibold flex gap-20 justify-center mt-20">
-        <h2>User Points: {userPoint}</h2>
-        <h2>Computer Points: {computerPoint}</h2>
+        
+      <h2>User Points: {userPoint}</h2>
+      <h2>Computer Points: {computerPoint}</h2>
+        
       </div>
       <div className="flex gap-20 justify-center mt-20">
         <div className="">
