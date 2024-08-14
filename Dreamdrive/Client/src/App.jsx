@@ -1,16 +1,18 @@
 import react from 'react'
+import Navbar from './Pages/Navbar.jsx'
+import Footer from './Pages/Footer.jsx'
+import { Outlet } from 'react-router-dom'
 
-import { RouterProvider } from 'react-router-dom'
-import router from "./Router/Router.jsx"
-
-function App() {
-  
-
+ export function App() {
   return (
     <>
-      <RouterProvider router={router}/>
+      <div>
+        <Navbar/>
+        <Outlet/>
+        <Footer/>
+      </div>
     </>
   )
 }
 
-export default App
+

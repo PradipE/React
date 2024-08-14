@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
 import carbody from '../assets/carbody.jpg'
-import { useNavigate } from 'react-router-dom'
+
 import Buyguide from '../Component/Buyguide'
-function Bodypage() {
+export function Bodypage() {
  
-  const Navigation= useNavigate()
   return (
        <>
        <div className='w-full h-auto grid'>
@@ -17,4 +16,4 @@ function Bodypage() {
   )
 }
 
-export default Bodypage
+

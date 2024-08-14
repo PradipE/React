@@ -1,17 +1,18 @@
 import {createContext,useContext} from 'react'
 //create Context
  const CreateContext =createContext()
+ //create a hook to use context data 
+    export const Contextdata =()=>
+    {
+       return useContext(CreateContext);
+    }
 //providecontext
-export const Contextprovider=({children})=>
+export const ContextProvider=({})=>
 { 
     return (
-        <CreateContext.Provider value={{...state}}>
-           {children}
+        <CreateContext.Provider value={{}}>
+           {}
         </CreateContext.Provider>
     )
 
-}
-export const Contextdata =()=>
-{
-   return useContext(CreateContext);
 }

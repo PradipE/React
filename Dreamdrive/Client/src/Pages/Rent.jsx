@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Rent() {
+export function Rent() {
   return (
     <div>
       
@@ -8,4 +8,4 @@ function Rent() {
   )
 }
 
-export default Rent
+

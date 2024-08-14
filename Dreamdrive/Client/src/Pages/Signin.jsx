@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import Button from '../Component/Button.jsx'
-function Signin() {
+ export function Signin() {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50">
       <div className="bg-gray-100 p-8 rounded-lg shadow-lg">
@@ -47,4 +47,4 @@ function Signin() {
   )
 }
 
-export default Signin
+

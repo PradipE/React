@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "../Component/Button";
-function Signup() {
+export function Signup() {
   return (
     <div className=" fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-60 ">
       <div className="bg-gray-100 p-8 rounded-lg shadow-lg">
@@ -68,4 +68,4 @@ function Signup() {
   );
 }
 
-export default Signup;
+
