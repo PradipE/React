@@ -3,14 +3,14 @@ import { createStore } from "redux"
  /*. we are making a reducer that contain two 
  thing according to this project one is state anathor is action is basicalli a
   functionn that define working */
-const Reducer = (state = 0, action) => {
+const Reducer = (Data = 0, action) => {
   switch (action.type) {
     case "Increment":
-      return state + 1;
+      return Data + 1;
     case "Decrement":
-      return state - 1;
+      return Data - 1;
     default:
-      return state;
+      return Data;
   }
 
 }

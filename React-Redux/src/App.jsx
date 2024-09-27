@@ -2,7 +2,7 @@ import { useState } from "react";
 import Working from "./component/Working.jsx";
 import { useDispatch } from "react-redux";
 function App() {
-  const [count, setCount] = useState(0);
+  
   const dispatch = useDispatch();
   return (
     <>
